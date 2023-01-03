@@ -199,7 +199,7 @@ public class UlarTangga extends JFrame implements ActionListener
         pCeklis2.setBounds(600,140,50,50);
         h2.setIcon(icon2);
         pCeklis2.add(h2);
-        c.add(pCeklis2,"Utara");
+        // c.add(pCeklis2,"Utara");
        
         // panel nama player - > akan tampil bila sudah di input
         nama1 = new JLabel(player1);
