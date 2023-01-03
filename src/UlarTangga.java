@@ -73,7 +73,7 @@ public class UlarTangga extends JFrame implements ActionListener
     JLabel h1 = new JLabel();
     JLabel h2 = new JLabel();
    
-    JLabel title = new JLabel("====== Ular Tangga ======");
+    JLabel title = new JLabel("Ular Tangga");
  
     // pembuatan panel-panel
     JPanel pUtara = new JPanel();
@@ -167,14 +167,14 @@ public class UlarTangga extends JFrame implements ActionListener
  
         // panel dadu 1
         Dimension diceSize = new Dimension(45,45);
-        pDadu1.setBounds(490,190,58,58);
+        pDadu1.setBounds(490,190,50,50);
         dice1.setIcon(dadu[0]);
         dice1.setPreferredSize(diceSize);
         pDadu1.add(dice1);
         c.add(pDadu1,"Utara");
        
         // panel dadu 2
-        pDadu2.setBounds(570,190,58,58);
+        pDadu2.setBounds(570,190,50,50);
         dice2.setIcon(dadu[0]);
         dice2.setPreferredSize(diceSize);
         pDadu2.add(dice2);
@@ -186,12 +186,12 @@ public class UlarTangga extends JFrame implements ActionListener
         c.add(pP1pic,"Utara");
  
         // panel gambar player 2
-        pP2pic.setBounds(480,120,50,50);
+        pP2pic.setBounds(480,140,50,50);
         pP2pic.add(p2);
         c.add(pP2pic,"Utara");
  
         // panel ceklis pic
-        pCeklis1.setBounds(600,90,50,50);  
+        pCeklis1.setBounds(600,80,50,50);  
         h1.setIcon(icon1);
         pCeklis1.add(h1);
         c.add(pCeklis1,"Utara");
@@ -203,7 +203,7 @@ public class UlarTangga extends JFrame implements ActionListener
        
         // panel nama player - > akan tampil bila sudah di input
         nama1 = new JLabel(player1);
-        pP1name.setBounds(525,90,65,50);
+        pP1name.setBounds(525,80,65,50);
         pP1name.add(nama1);
         c.add(pP1name,"Timur");
  
@@ -217,7 +217,7 @@ public class UlarTangga extends JFrame implements ActionListener
         nP2=player2;
  
         // panel button
-        pButton.setBounds(498,280,125,125);
+        pButton.setBounds(495,280,125,125);
         pButton.add(pInButton);
  
         // pakai grid background layout
@@ -256,7 +256,7 @@ public class UlarTangga extends JFrame implements ActionListener
         pUtara.setBounds(3, 0, 650, 200); // x , y , lebar, panjang
         pUtara.add(pJudul);
         title.setFont(new Font("Helvatica",Font.BOLD,35));
-        title.setForeground(Color.blue);
+        title.setForeground(Color.pink);
         pJudul.add(title);
  
         c.add(pUtara,"Utara");
@@ -505,8 +505,8 @@ public class UlarTangga extends JFrame implements ActionListener
         {
             temp = true;
            
-            nP1 = JOptionPane.showInputDialog(null,"Masukkan nama Player 1 :");
-            nP2 = JOptionPane.showInputDialog(null,"Masukkan nama Player 2 :");
+            nP1 = JOptionPane.showInputDialog(null,"Player 1 :");
+            nP2 = JOptionPane.showInputDialog(null,"Player 2 :");
  
             if(nP1.equals(" ") || nP2.equals(" "))
             {
@@ -602,48 +602,60 @@ public class UlarTangga extends JFrame implements ActionListener
             }
             switch(posPlayer1) //utk jalan yang ada tangga atau ular (player 1)
             {
-                case 3  : posPlayer1=23;   
+                case 3  : posPlayer1=24;   
                 break;
  
-                case 33 : posPlayer1=15;   
+                case 15 : posPlayer1=7;   
                 break;
  
-                case 50 : posPlayer1=69;   
+                case 28 : posPlayer1=34;   
                 break;
  
-                case 65 : posPlayer1=95;   
+                case 51 : posPlayer1=31;   
                 break;
  
-                case 98 : posPlayer1=56;   
+                case 56 : posPlayer1=26;   
                 break;
  
-                case 59 : posPlayer1=39;   
+                case 63 : posPlayer1=41;   
                 break;
  
-                case 89 : posPlayer1=67;   
+                case 64 : posPlayer1=98;   
+                break;
+
+                case 96 : posPlayer1=66;
+                break;
+
+                case 99 : posPlayer1=80;
                 break;
             }
             switch(posPlayer2)  //utk jalan yang ada tangga atau ular (player 2)
             {
-                case 3  : posPlayer2=23;   
+                case 3  : posPlayer1=24;   
                 break;
  
-                case 33 : posPlayer2=15;   
+                case 15 : posPlayer1=7;   
                 break;
  
-                case 50 : posPlayer2=69;   
+                case 28 : posPlayer1=34;   
                 break;
  
-                case 65 : posPlayer2=95;   
+                case 51 : posPlayer1=31;   
                 break;
  
-                case 98 : posPlayer2=56;   
+                case 56 : posPlayer1=26;   
                 break;
  
-                case 59 : posPlayer2=39;   
+                case 63 : posPlayer1=41;   
                 break;
  
-                case 89 : posPlayer2=67;   
+                case 64 : posPlayer1=98;   
+                break;
+
+                case 96 : posPlayer1=66;
+                break;
+
+                case 99 : posPlayer1=80;
                 break;
             }
  
