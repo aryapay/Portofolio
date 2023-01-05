@@ -26,9 +26,9 @@ public class UlarTangga extends JFrame implements ActionListener
     public static Boolean temp = false;
    
     // untuk munculin gambar dadu
-    public static ImageIcon dadu[] = { new ImageIcon("src/img/dice1.png"), new ImageIcon("img/dadu2.jpeg"),
-                                        new ImageIcon("src/img/dice3.png"), new ImageIcon("img/dadu4.jpeg"),
-                                         new ImageIcon("src/img/dice5.png"), new ImageIcon("img/dadu6.jpeg") };
+    public static ImageIcon dadu[] = { new ImageIcon("src/img/Dadu1.png"), new ImageIcon("src/img/Dadu2.png"),
+                                        new ImageIcon("src/img/Dadu3.png"), new ImageIcon("src/img/Dadu4.png"),
+                                         new ImageIcon("src/img/Dadu5.png"), new ImageIcon("src/img/Dadu6.png") };
    
     // image papan
     ImageIcon PapanKosong[][] = new ImageIcon[10][10];
@@ -482,12 +482,15 @@ public class UlarTangga extends JFrame implements ActionListener
         //metode ini dipanggil ketika thread ini jalan
         public void run()
         {
+            int max = 6;
+            int min = 1;
+            int range = max - min + 1;
             while(true)
             {
                 // untuk cara kerja acak dadu
-                dc1 = (int)(Math.random() * 6);
+                dc1 = (int)(Math.random() * range);
                 dice1.setIcon(dadu[dc1]);
-                dc2 = (int)(Math.random() * 6);
+                dc2 = (int)(Math.random() * range);
                 dice2.setIcon(dadu[dc2]);
  
                 if(temp==true)
@@ -585,6 +588,7 @@ public class UlarTangga extends JFrame implements ActionListener
                     lArrPapan[0][0].setIcon(PapanP1[0][0]);
                     JOptionPane.showMessageDialog(this,"Horeeee! Player "+ turn +" menang yeayyyyy!");
                 }
+                System.out.println(posPlayer1);
             }
             else if(turn==2)
             {
@@ -599,6 +603,7 @@ public class UlarTangga extends JFrame implements ActionListener
                     lArrPapan[0][0].setIcon(PapanP2[0][0]);
                     JOptionPane.showMessageDialog(this,"Horeeee! Player "+ turn +" menang yeayyyyy!");
                 }
+                System.out.println(posPlayer2);
             }
             switch(posPlayer1) //utk jalan yang ada tangga atau ular (player 1)
             {
@@ -631,31 +636,31 @@ public class UlarTangga extends JFrame implements ActionListener
             }
             switch(posPlayer2)  //utk jalan yang ada tangga atau ular (player 2)
             {
-                case 3  : posPlayer1=24;   
+                case 3  : posPlayer2=24;   
                 break;
  
-                case 15 : posPlayer1=7;   
+                case 15 : posPlayer2=7;   
                 break;
  
-                case 28 : posPlayer1=34;   
+                case 28 : posPlayer2=34;   
                 break;
  
-                case 51 : posPlayer1=31;   
+                case 51 : posPlayer2=31;   
                 break;
  
-                case 56 : posPlayer1=26;   
+                case 56 : posPlayer2=26;   
                 break;
  
-                case 63 : posPlayer1=41;   
+                case 63 : posPlayer2=41;   
                 break;
  
-                case 64 : posPlayer1=98;   
+                case 64 : posPlayer2=98;   
                 break;
 
-                case 96 : posPlayer1=66;
+                case 96 : posPlayer2=66;
                 break;
 
-                case 99 : posPlayer1=80;
+                case 99 : posPlayer2=80;
                 break;
             }
  
