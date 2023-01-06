@@ -482,11 +482,9 @@ public class UlarTangga extends JFrame implements ActionListener
         //metode ini dipanggil ketika thread ini jalan
         public void run()
         {
-            int max = 6;
-            int min = 1;
-            int range = max - min + 1;
             while(true)
             {
+                int range = 6;
                 // untuk cara kerja acak dadu
                 dc1 = (int)(Math.random() * range);
                 dice1.setIcon(dadu[dc1]);
@@ -628,6 +626,9 @@ public class UlarTangga extends JFrame implements ActionListener
                 case 64 : posPlayer1=98;   
                 break;
 
+                case 88 : posPlayer1=69;   
+                break;
+
                 case 96 : posPlayer1=66;
                 break;
 
@@ -655,6 +656,9 @@ public class UlarTangga extends JFrame implements ActionListener
                 break;
  
                 case 64 : posPlayer2=98;   
+                break;
+
+                case 88 : posPlayer1=69;   
                 break;
 
                 case 96 : posPlayer2=66;
